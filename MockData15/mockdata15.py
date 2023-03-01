@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 from streamlit_extras.altex import _chart
 
-st.set_page_config(layout="centered", page_title="Data Editor", page_icon="🧮")
+#st.set_page_config(layout="centered", page_title="Data Editor", page_icon="")
 
 st.title("Data to Chart")
 st.caption("This is a demo of the `st.experimental_data_editor`.")
@@ -69,7 +69,7 @@ with st.echo():
         num_rows="dynamic",
     )
 
-st.caption("Modify cells above 👆 or even ➕ add rows, and check out the impacts below 👇")
+st.caption("Modify cells above or even add rows, and check out the impacts below")
 
 left, middle, right = st.columns((4, 3, 3))
 left.altair_chart(get_age_hist(edited_df), use_container_width=True)
